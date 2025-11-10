@@ -180,8 +180,75 @@
       </google-codelab-step>
     
       <google-codelab-step label="Creating the Pomodoro app" duration="0">
-        <pre><code>Create a step-by-step implementation plan for the Pomodoro web application and save it to plan.md
+        <p>In this hands-on, we&#39;ll develop a Pomodoro timer application. This application has functionality to set work time and break time and manage timers.</p>
+<p>We aim to create an application with the following UI:</p>
+<p class="image-container"><img alt="Pomodoro Timer UI" src="img/db1beea0fe471449.png"></p>
+<p>Let&#39;s first create a new Python file in VS Code. Since we want to create this as a web application, we&#39;ll use Fastify. Let&#39;s name the main file &#34;server.py&#34;.</p>
+<h2 is-upgraded>Project Overview</h2>
+<p>Create a web timer application for the Pomodoro Technique.</p>
+<h2 is-upgraded>Required Features</h2>
+<p>These are the required feature for the MVP:</p>
+<ul>
+<li>25-minute work timer</li>
+<li>5-minute break timer</li>
+<li>Timer start/stop/reset</li>
+<li>Progress display</li>
+<li>Responsive web UI</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Think About Pomodoro Timer Design" duration="10">
+        <p>First, rather than starting implementation immediately, let&#39;s consult with Copilot about what approach and design to proceed with. From here on, we&#39;ll proceed entirely in agent mode.</p>
+<p>What&#39;s helpful when creating a web application with UI like this is Copilot Chat&#39;s image upload functionality. Using this, you can make Copilot understand your application&#39;s UI image.</p>
+<h2 is-upgraded>Architecture</h2>
+<p>Type <code>#</code> in the chat field and wrote the name of the UI image: <code>pomodoro.png</code>.</p>
+<p>Once the image is uploaded, it will be displayed in Copilot Chat.</p>
+<p class="image-container"><img alt="VS Code Copilot Chat Context Menu" src="img/34a6b6e70d8aa9fb.png"></p>
+<p>Then, enter the following prompt:</p>
+<pre><code language="language-text" class="language-text">We plan to create a Pomodoro timer web app in this project. The attached image is a UI mock for that app. What design should we proceed with to create this app using Fastify and HTML/CSS/JavaScript? Please suggest an architecture.
 </code></pre>
+<p>It will then suggest a recommended web application architecture.</p>
+<p>If there are points that should be improved or considerations that are lacking in this architecture, try pointing them out. For example, the following suggestion:</p>
+<pre><code>Considering the ease of unit testing, please also list any improvements or additions needed to the current architecture.
+</code></pre>
+<p>After this exchange, once the architectural design is settled, let&#39;s save that content to a file once. By doing so, you can reference the same architectural content even if you open a different chat session.</p>
+<pre><code>Since the architecture has been settled through our conversation so far, please compile a web application architecture proposal in a file called architecture.md in `docs/` directory, based on the content of our conversation.
+</code></pre>
+<aside class="special"><p>When a conversation with Copilot Chat reaches a conclusion, you can give clearer instructions to Copilot by starting a new conversation. To start a new conversation, click the &#34;New conversation&#34; button at the top of the chat window. At that time, content you want to reference in future chats, like the architectural content this time, is convenient to write out and save to files as we did here.</p>
+</aside>
+<h2 is-upgraded>Specification</h2>
+<p>To make sure the agent understand the requirements, we create another document using this prompt:</p>
+<pre><code>Create a document to be used as specification for the development of this application. Make sure these requirements are included in the specification:
+- 25-minute work timer
+- 5-minute break timer
+- Timer start/stop/reset
+- Progress display
+- Responsive web UI
+Compile the specifications in a file called in specs.md in `docs/` directory.
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Explain Code" duration="15">
+        <p>Let&#39;s have Copilot Chat explain this code.</p>
+<h2 is-upgraded>Open Copilot Chat</h2>
+<ol type="1">
+<li>Click the <strong>Chat</strong> icon (chat bubble icon) in the VSCode sidebar to open Copilot Chat</li>
+<li>Or open the Chat panel with <code>Ctrl+Alt+I</code> (on macOS <code>Ctrl+Cmd+I</code>)</li>
+</ol>
+<h2 is-upgraded>Check Chat Mode</h2>
+<p>Confirm the chat mode is set to &#34;Ask&#34;.</p>
+<h2 is-upgraded>Request File Explanation</h2>
+<ol type="1">
+<li>Enter <code>#server.py</code> in the chat field. Using the character <code>#</code> will let you select a file.</li>
+<li>Enter the prompt &#34;Please explain this entire file.&#34;</li>
+<li>Press Enter and Copilot Chat will explain the entire <code>server.py</code> file</li>
+</ol>
+<aside class="special"><p><strong>Tip</strong>: By adding <code>#</code> before a filename, you can include that entire file as context.</p>
+</aside>
 
 
       </google-codelab-step>

@@ -131,7 +131,7 @@ Open the settings screen using one of the following methods:
 
 ### 3. Search Settings
 Enter the following in the settings search box:
-```
+```text
 github.copilot.nextEditSuggestions.enabled
 ```
 
@@ -180,16 +180,109 @@ Verify the setting is correctly applied:
 
 ## Creating the Pomodoro app
 
-```
-Create a step-by-step implementation plan for the Pomodoro web application and save it to plan.md
+In this hands-on, we'll develop a Pomodoro timer application. This application has functionality to set work time and break time and manage timers.
+
+We aim to create an application with the following UI:
+
+![Pomodoro Timer UI](github-copilot-workshop-id/img/__pomodoro.png)
+
+Let's first create a new Python file in VS Code. Since we want to create this as a web application, we'll use Fastify. Let's name the main file "server.py".
+
+### Project Overview
+
+Create a web timer application for the Pomodoro Technique.
+
+### Required Features
+
+These are the required feature for the MVP:
+
+- 25-minute work timer
+- 5-minute break timer
+- Timer start/stop/reset
+- Progress display
+- Responsive web UI
+
+
+## Think About Pomodoro Timer Design
+Duration: 10
+
+First, rather than starting implementation immediately, let's consult with Copilot about what approach and design to proceed with. From here on, we'll proceed entirely in agent mode.
+
+What's helpful when creating a web application with UI like this is Copilot Chat's image upload functionality. Using this, you can make Copilot understand your application's UI image.
+
+### Architecture
+
+Type `#` in the chat field and wrote the name of the UI image: `pomodoro.png`.
+
+Once the image is uploaded, it will be displayed in Copilot Chat.
+
+![VS Code Copilot Chat Context Menu](github-copilot-workshop-id/img/__add-context.png)
+
+Then, enter the following prompt:
+
+```text
+We plan to create a Pomodoro timer web app in this project. The attached image is a UI mock for that app. What design should we proceed with to create this app using Fastify and HTML/CSS/JavaScript? Please suggest an architecture.
 ```
 
+It will then suggest a recommended web application architecture.
+
+If there are points that should be improved or considerations that are lacking in this architecture, try pointing them out. For example, the following suggestion:
+```text
+Considering the ease of unit testing, please also list any improvements or additions needed to the current architecture.
+```
+
+After this exchange, once the architectural design is settled, let's save that content to a file once. By doing so, you can reference the same architectural content even if you open a different chat session.
+```text
+Since the architecture has been settled through our conversation so far, please compile a web application architecture proposal in a file called architecture.md in `docs/` directory, based on the content of our conversation.
+```
+
+> aside positive
+>
+> When a conversation with Copilot Chat reaches a conclusion, you can give clearer instructions to Copilot by starting a new conversation. To start a new conversation, click the "New conversation" button at the top of the chat window. At that time, content you want to reference in future chats, like the architectural content this time, is convenient to write out and save to files as we did here.
+
+### Specification
+
+To make sure the agent understand the requirements, we create another document using this prompt:
+```text
+Create a document to be used as specification for the development of this application. Make sure these requirements are included in the specification:
+- 25-minute work timer
+- 5-minute break timer
+- Timer start/stop/reset
+- Progress display
+- Responsive web UI
+Compile the specifications in a file called in specs.md in `docs/` directory.
+```
+
+
+## Explain Code
+Duration: 15
+
+Let's have Copilot Chat explain this code.
+
+### Open Copilot Chat
+
+1. Click the **Chat** icon (chat bubble icon) in the VSCode sidebar to open Copilot Chat
+2. Or open the Chat panel with `Ctrl+Alt+I` (on macOS `Ctrl+Cmd+I`)
+
+### Check Chat Mode
+
+Confirm the chat mode is set to "Ask".
+
+### Request File Explanation
+
+1. Enter `#server.py` in the chat field. Using the character `#` will let you select a file.
+2. Enter the prompt "Please explain this entire file."
+3. Press Enter and Copilot Chat will explain the entire `server.py` file
+
+> aside positive
+>
+> **Tip**: By adding `#` before a filename, you can include that entire file as context.
 
 
 ## [WIP] Documentation
 
 ### Create User Flow
 
-```
+```text
 Create a documentation about how to use this web application. Draw a user flow chart and sequence diagram, use Mermaid format.
 ```
