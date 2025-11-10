@@ -48,7 +48,7 @@
     
       <google-codelab-step label="Project Setup" duration="15">
         <p>This workshop uses the following GitHub repository:</p>
-<p><strong>Project URL</strong>: https://github.com/arisetyo/2025-github-ur-copilot-workshop</p>
+<p><strong>Project URL</strong>: <a href="https://github.com/arisetyo/2025-github-ur-copilot-workshop" target="_blank">https://github.com/arisetyo/2025-github-ur-copilot-workshop</a></p>
 <h2 is-upgraded>Step 1: Fork the Repository</h2>
 <p>First, open the project URL above in your browser and fork the repository:</p>
 <ol type="1">
@@ -86,6 +86,110 @@
 <ol type="1" start="4">
 <li>Open the project in VSCode</li>
 </ol>
+<h2 is-upgraded>Step 3: Workspace Setup</h2>
+<p>After opening the project, please install the following extensions:</p>
+<ol type="1">
+<li>Install <strong>GitHub Copilot</strong> extension</li>
+<li>Install <strong>GitHub Copilot Chat</strong> extension</li>
+<li>Install <strong>Python</strong> extension</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configuration Check" duration="10">
+        <h2 is-upgraded>Branch Preparation</h2>
+<p>Create and switch to the <code>feature/pomodoro</code> branch:</p>
+<pre><code language="language-bash" class="language-bash">git checkout -b feature/pomodoro
+</code></pre>
+<ol type="1">
+<li>Confirm that you are signed in to your GitHub account in VSCode</li>
+<li>Confirm that Copilot functionality is enabled</li>
+<li>Confirm that the Python interpreter is set up correctly</li>
+</ol>
+<h2 is-upgraded>Next Edit Suggestions Setup</h2>
+<p>⚙️ <a href="vscode://settings/github.copilot.nextEditSuggestions.enabled" target="_blank"><code>github.copilot.nextEditSuggestions.enabled</code></a> is a setting that enables GitHub Copilot&#39;s next-generation edit suggestion feature. This feature allows you to receive more advanced code editing suggestions.</p>
+<h2 is-upgraded>1. Open VS Code</h2>
+<h2 is-upgraded>2. Access Settings</h2>
+<p>Open the settings screen using one of the following methods:</p>
+<h3 is-upgraded>Method A: From Menu</h3>
+<ul>
+<li><strong>Windows/Linux</strong>: <code>File</code> → <code>Preferences</code> → <code>Settings</code></li>
+<li><strong>macOS</strong>: <code>Code</code> → <code>Settings...</code> → <code>Settings</code></li>
+</ul>
+<h3 is-upgraded>Method B: Keyboard Shortcut</h3>
+<ul>
+<li><strong>Windows/Linux</strong>: <code>Ctrl + ,</code></li>
+<li><strong>macOS</strong>: <code>Cmd + ,</code></li>
+</ul>
+<h3 is-upgraded>Method C: Command Palette</h3>
+<ul>
+<li><code>Ctrl + Shift + P</code> (Windows/Linux) or <code>Cmd + Shift + P</code> (macOS)</li>
+<li>Select <code>Preferences: Open Settings (UI)</code></li>
+</ul>
+<h2 is-upgraded>3. Search Settings</h2>
+<p>Enter the following in the settings search box:</p>
+<pre><code>github.copilot.nextEditSuggestions.enabled
+</code></pre>
+<h2 is-upgraded>4. Enable Setting</h2>
+<ul>
+<li>Check the checkbox for the setting item shown in search results</li>
+<li>Or change <code>false</code> to <code>true</code></li>
+</ul>
+<h2 is-upgraded>5. Confirm Setting</h2>
+<p>Verify the setting is correctly applied:</p>
+<ul>
+<li>Restart VSCode (recommended)</li>
+<li>Edit code in the editor and confirm the new suggestion feature works</li>
+</ul>
+<h2 is-upgraded>Alternative Method: Direct Edit in settings.json</h2>
+<h3 is-upgraded>1. Open settings.json file</h3>
+<ul>
+<li><code>Ctrl + Shift + P</code> (Windows/Linux) or <code>Cmd + Shift + P</code> (macOS)</li>
+<li>Select <code>Preferences: Open User Settings (JSON)</code></li>
+</ul>
+<h3 is-upgraded>2. Add Setting</h3>
+<pre><code language="language-json" class="language-json">{
+    &#34;github.copilot.nextEditSuggestions.enabled&#34;: true
+}
+</code></pre>
+<h3 is-upgraded>3. Save File</h3>
+<ul>
+<li><code>Ctrl + S</code> (Windows/Linux) or <code>Cmd + S</code> (macOS)</li>
+</ul>
+<h2 is-upgraded>Important Notes</h2>
+<ul>
+<li>Make sure VSCode&#39;s GitHub Copilot extension is updated to the latest version</li>
+<li>Restarting VSCode is recommended after setting changes</li>
+</ul>
+<h2 is-upgraded>Troubleshooting</h2>
+<h3 is-upgraded>If Settings Are Not Found</h3>
+<ol type="1">
+<li>Confirm GitHub Copilot extension is installed</li>
+<li>Confirm extension is updated to the latest version</li>
+<li>Restart VSCode and try again</li>
+</ol>
+<h3 is-upgraded>If Functionality Doesn&#39;t Work</h3>
+<ol type="1">
+<li>Confirm you are logged in to GitHub Copilot</li>
+<li>Check internet connection</li>
+<li>Check VSCode console for error messages</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Creating the Pomodoro app" duration="0">
+        <pre><code>Create a step-by-step implementation plan for the Pomodoro web application and save it to plan.md
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="[WIP] Documentation" duration="0">
+        <h2 is-upgraded>Create User Flow</h2>
+<pre><code>Create a documentation about how to use this web application. Draw a user flow chart and sequence diagram, use Mermaid format.
+</code></pre>
 
 
       </google-codelab-step>
