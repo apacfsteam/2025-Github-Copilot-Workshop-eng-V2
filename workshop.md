@@ -447,23 +447,42 @@ Using the custom instruction we have added in the previous slide, Copilot first 
 
 ![Unit test request](github-copilot-workshop-id/img/__ut.png)
 
+We can ask Copilot to run the test from the Chat panel. This way it will check the result from the terminal automatically and make adjustments as necessary.
+We can always do it manually by referring to the added section in the readme file.
+
+![Unit test result](github-copilot-workshop-id/img/__ut-result.png)
+
+
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 12 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## [WIP] Product Documentation
-Duration: 10
+## Product Documentation
+Duration: 5
 
-### Create User Flow
+Let's ask Copilot to add more documentations:
 
 ```text
-Create a documentation about how to use this web application. Draw a user flow chart and sequence diagram, use Mermaid format.
+Create a documentation on how the current application works. Add a user flow chart and sequence diagram, using Mermaid format.
 ```
+
+We can use your favorite markdown viewer plugin to check the result, including the charts.
+Because the charts are created using Mermaid, you can also copy-paste the Mermaid code into Mermaid's tool.
+
+![App documentation](github-copilot-workshop-id/img/__docs-1.png)
+![App documentation](github-copilot-workshop-id/img/__docs-2.png)
+
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 13 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## [WIP] Github MCP
-Duration: 10
+## Adding Github MCP Server
+Duration: 5
+
+By using Model Context Protocol (MCP) servers, you can extend Copilot's functionality.
+
+In this slide we'll learn how to add a custom MCP to VSCode. In VSCode, we can also search for available MCPs in the `Extensions` panel.
+
+
 
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
