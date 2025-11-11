@@ -179,7 +179,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Creating the Pomodoro app" duration="10">
+      <google-codelab-step label="Creating the Pomodoro app" duration="5">
         <p>In this hands-on, we&#39;ll develop a Pomodoro timer application. This application has functionality to set work time and break time and manage timers.</p>
 <p>We aim to create an application with the following UI:</p>
 <p class="image-container"><img alt="Pomodoro Timer UI" src="img/db1beea0fe471449.png"></p>
@@ -199,7 +199,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Think About Pomodoro Timer Design" duration="15">
+      <google-codelab-step label="Think About Pomodoro Timer Design" duration="10">
         <p>First, rather than starting implementation immediately, let&#39;s consult with Copilot about what approach and design to proceed with. From here on, we&#39;ll proceed entirely in agent mode.</p>
 <p>What&#39;s helpful when creating a web application with UI like this is Copilot Chat&#39;s image upload functionality. Using this, you can make Copilot understand your application&#39;s UI image.</p>
 <h2 is-upgraded>Architecture</h2>
@@ -233,7 +233,7 @@ Compile the specifications in a file called in specs.md in `docs/` directory.
 
       </google-codelab-step>
     
-      <google-codelab-step label="Let&#39;s List What Needs to Be Done" duration="10">
+      <google-codelab-step label="Let&#39;s List What Needs to Be Done" duration="5">
         <p>In using Copilot it is not recommended to try implement a large feature all at once. It is better to start implementing in small increments. This improves the accuracy of the code Copilot suggests and allows for smoother development progress.</p>
 <p>Let&#39;s consult with Copilot Chat about this. Attach <code>pomodoro.png</code>, <code>architecture.md</code>, and <code>specs.md</code>, using the <code>Add Context...</code> button:</p>
 <p class="image-container"><img alt="Attach Context" src="img/261f8c2f5127b944.png"></p>
@@ -250,7 +250,7 @@ Then, I want to implement this Pomodoro timer application step by step. Based on
 
       </google-codelab-step>
     
-      <google-codelab-step label="Set Up The Python Environment (Optional)" duration="10">
+      <google-codelab-step label="Set Up The Python Environment (Optional)" duration="5">
         <p>To make sure we can develop this project without obstacles, let&#39;s try setting up the Python environment using <code>uv</code> and <code>venv</code>.</p>
 <h2 is-upgraded>uv</h2>
 <p>Install uv if you don&#39;t have it in your system yet. uv is a modern, high-performance Python package manager and installer written in Rust. It serves as a drop-in replacement for traditional Python package management tools like pip, offering significant improvements in speed, reliability, and dependency resolution.. Go to this file to install uv: https://docs.astral.sh/uv/getting-started/installation/.</p>
@@ -265,7 +265,7 @@ Then, I want to implement this Pomodoro timer application step by step. Based on
 
       </google-codelab-step>
     
-      <google-codelab-step label="Let&#39;s Implement" duration="30">
+      <google-codelab-step label="Let&#39;s Implement" duration="15">
         <p>Now that all the preparation is complete, let&#39;s finally start implementation.</p>
 <p>Attach the <code>plan.md</code> file to the chat then use this prompt.</p>
 <pre><code>Please implement the development of this project using `plan.md` and other necessary documents.
@@ -289,7 +289,7 @@ Don&#39;t forget to activate `venv` by using this command: `source .venv/bin/act
 
       </google-codelab-step>
     
-      <google-codelab-step label="Explain Code" duration="15">
+      <google-codelab-step label="Explain Code" duration="10">
         <p>Let&#39;s have Copilot Chat explain this code.</p>
 <h2 is-upgraded>Open Copilot Chat</h2>
 <ol type="1">
@@ -310,7 +310,7 @@ Don&#39;t forget to activate `venv` by using this command: `source .venv/bin/act
 
       </google-codelab-step>
     
-      <google-codelab-step label="[WIP] Custom Instructions" duration="10">
+      <google-codelab-step label="Custom Instructions" duration="10">
         <h2 is-upgraded>Create Custom Copilot Instruction</h2>
 <p>Let&#39;s create a <a href="https://copilot-instructions.md/" target="_blank">custom instruction</a> that Copilot will follow before executing prompts in chat.</p>
 <pre><code language="language-bash" class="language-bash">mkdir .github &amp;&amp; cd .github
@@ -340,8 +340,16 @@ Before making any big changes to the project, always check the architecture docu
 
       </google-codelab-step>
     
-      <google-codelab-step label="[WIP] Unit Tests" duration="10">
-        
+      <google-codelab-step label="[WIP] Unit Tests" duration="5">
+        <p>We can ask Copilot to create unit tests. For example, we can enter this prompt to do that:</p>
+<pre><code language="language-text" class="language-text">We want to add unit testing to this project.
+Please create unit tests for all the important functions in this application.
+Install necessary libraries to support this change.
+Then in the readme file, add explanation on how to run the unit tests.
+</code></pre>
+<p>As we can see below, Copilot created a to-do list to complete the task from the previous prompt. Using the custom instruction we have added in the previous slide, Copilot first check the architecture document to provide a more accurate solution.</p>
+<p class="image-container"><img alt="Unit test request" src="img/98effe6470e40459.png"></p>
+
 
       </google-codelab-step>
     
@@ -353,13 +361,20 @@ Before making any big changes to the project, always check the architecture docu
 
       </google-codelab-step>
     
-      <google-codelab-step label="[WIP] Github MCP" duration="15">
+      <google-codelab-step label="[WIP] Github MCP" duration="10">
         
 
       </google-codelab-step>
     
       <google-codelab-step label="[WIP] Github Copilot Online" duration="5">
-        
+        <p>Copilot is also available on Github&#39;s website. Let&#39;s see some of the things Copilot can do for us in the Github website.</p>
+<h2 is-upgraded>PR Description</h2>
+<p>Ask Copilot to add Pull Request description.</p>
+<p class="image-container"><img alt="Request PR summary" src="img/18ffabfac342e07b.png"></p>
+<h2 is-upgraded>PR Review</h2>
+<p>Add Copilot as a reviewer to a Pull Request.</p>
+<p class="image-container"><img alt="PR summary result" src="img/ef2ee5de09cd6b76.png"></p>
+
 
       </google-codelab-step>
     
@@ -378,8 +393,28 @@ Before making any big changes to the project, always check the architecture docu
 
       </google-codelab-step>
     
-      <google-codelab-step label="[WIP] Congratulations 🎉" duration="5">
-        
+      <google-codelab-step label="Congratulations 🎉" duration="5">
+        <h2 is-upgraded>What We Learned Today</h2>
+<p>In this workshop, we learned using Github Copilot to do the following:</p>
+<ul>
+<li>Using specifications to develop an application</li>
+<li>Code explanation and improvement</li>
+<li>Utilizing agent functionality</li>
+<li>Adding issues and development of new features</li>
+</ul>
+<h2 is-upgraded>Next Steps</h2>
+<ul>
+<li>Try using Copilot in actual projects</li>
+<li>Challenge more complex application development</li>
+<li>Keep up with new Copilot features</li>
+</ul>
+<h2 is-upgraded>Resources</h2>
+<ul>
+<li><a href="https://docs.github.com/copilot" target="_blank">GitHub Copilot Documentation</a></li>
+<li><a href="https://docs.github.com/copilot/using-github-copilot/best-practices-for-using-github-copilot" target="_blank">GitHub Copilot Best Practices</a></li>
+</ul>
+<p>Great work!</p>
+
 
       </google-codelab-step>
     

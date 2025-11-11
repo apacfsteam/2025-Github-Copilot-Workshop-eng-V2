@@ -8,7 +8,9 @@ feedback link: https://example.com/feedback
 
 # GitHub Copilot Workshop
 
-
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 01 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## About the Workshop
 Duration: 5
 
@@ -28,8 +30,9 @@ GitHub Copilot Chat enables interactive dialogue with AI through a chat experien
 - GitHub Copilot license is available
 - GitHub account is available
 
-
-
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 02 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Project Setup
 Duration: 15
 
@@ -92,7 +95,9 @@ After opening the project, please install the following extensions:
 3. Install **Python** extension
 
 
-
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 03 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Configuration Check
 Duration: 10
 
@@ -178,8 +183,11 @@ Verify the setting is correctly applied:
 3. Check VSCode console for error messages
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 04 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Creating the Pomodoro app
-Duration: 10
+Duration: 5
 
 In this hands-on, we'll develop a Pomodoro timer application. This application has functionality to set work time and break time and manage timers.
 
@@ -204,8 +212,11 @@ These are the required feature for the MVP:
 - Responsive web UI
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 05 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Think About Pomodoro Timer Design
-Duration: 15
+Duration: 10
 
 First, rather than starting implementation immediately, let's consult with Copilot about what approach and design to proceed with. From here on, we'll proceed entirely in agent mode.
 
@@ -257,9 +268,11 @@ Create a document to be used as specification for the development of this applic
 Compile the specifications in a file called in specs.md in `docs/` directory.
 ```
 
-
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 06 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Let's List What Needs to Be Done
-Duration: 10
+Duration: 5
 
 In using Copilot it is not recommended to try implement a large feature all at once. It is better to start implementing in small increments. This improves the accuracy of the code Copilot suggests and allows for smoother development progress.
 
@@ -285,8 +298,11 @@ Then, I want to implement this Pomodoro timer application step by step. Based on
 > Also, if the result from Copilot does not meet your needs, you can always ask Copilot to make adjustments.
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 07 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Set Up The Python Environment (Optional)
-Duration: 10
+Duration: 5
 
 To make sure we can develop this project without obstacles, let's try setting up the Python environment using `uv` and `venv`.
 
@@ -304,9 +320,11 @@ Activate venv:
 source .venv/bin/activate
 ```
 
-
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 08 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Let's Implement
-Duration: 30
+Duration: 15
 
 Now that all the preparation is complete, let's finally start implementation.
 
@@ -339,8 +357,11 @@ Below is the result of step 1 implementation in my case. What kind of applicatio
 ![Example Result](github-copilot-workshop-id/img/__result-2.png)
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 09 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Explain Code
-Duration: 15
+Duration: 10
 
 Let's have Copilot Chat explain this code.
 
@@ -364,6 +385,9 @@ Confirm the chat mode is set to "Ask".
 ![Explanation from Copilot](github-copilot-workshop-id/img/__ask-2.png)
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 10 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Custom Instructions
 Duration: 10
 
@@ -403,10 +427,29 @@ You can add other things that you want Copilot to do with each request in that f
 Here are some examples of great prompts that you can use, modify, and adjust: [Godlike Prompts](https://copilot-instructions.md/prompts.html)
 
 
-## [WIP] Unit Tests
-Duration: 10
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 11 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+## Unit Tests
+Duration: 5
 
+We can ask Copilot to create unit tests. For example, we can enter this prompt to do that:
 
+```text
+We want to add unit testing to this project.
+Please create unit tests for all the important functions in this application.
+Install necessary libraries to support this change.
+Then in the readme file, add explanation on how to run the unit tests.
+```
+
+As we can see below, Copilot created a to-do list to complete the task from the previous prompt.
+Using the custom instruction we have added in the previous slide, Copilot first check the architecture document to provide a more accurate solution.
+
+![Unit test request](github-copilot-workshop-id/img/__ut.png)
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 12 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## [WIP] Product Documentation
 Duration: 10
 
@@ -416,26 +459,58 @@ Duration: 10
 Create a documentation about how to use this web application. Draw a user flow chart and sequence diagram, use Mermaid format.
 ```
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 13 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## [WIP] Github MCP
-Duration: 15
+Duration: 10
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 14 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## [WIP] Github Copilot Online
 Duration: 5
 
+Copilot is also available on Github's website. Let's see some of the things Copilot can do for us in the Github website.
 
+### PR Description
+
+Ask Copilot to add Pull Request description.
+
+![Request PR summary](github-copilot-workshop-id/img/__pr-summary.png)
+
+### PR Review
+
+Add Copilot as a reviewer to a Pull Request.
+
+![PR summary result](github-copilot-workshop-id/img/__pr-summary-result.png)
+
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 15 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## [WIP] Automatic Issue Creation and Coding Agent
 Duration: 15
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 16 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## [WIP] Implement PR From Coding Agent
 Duration: 5
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 17 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## [WIP] Update The Documents
 Duration: 15
 
 
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE 18 = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Congratulations 🎉
 Duration: 5
 
