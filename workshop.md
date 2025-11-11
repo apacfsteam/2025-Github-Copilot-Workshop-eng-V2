@@ -431,7 +431,7 @@ Here are some examples of great prompts that you can use, modify, and adjust: [G
 <!-- = = = = = = = = = = = = =  SLIDE 11 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Unit Tests
-Duration: 5
+Duration: 10
 
 We can ask Copilot to create unit tests. For example, we can enter this prompt to do that:
 
@@ -525,7 +525,7 @@ Now you can reference GitHub information directly in Copilot Chat.
 <!-- = = = = = = = = = = = = =  SLIDE 14 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Github Copilot Online
-Duration: 5
+Duration: 10
 
 Copilot is also available on Github's website. Click on [this link](https://github.com/copilot/) to open Copilot on Github.
 
@@ -548,10 +548,27 @@ It will create a comprehensive PR description based on the commits in the branch
 
 We can also add Copilot as a reviewer to a Pull Request. Very handy if you're working solo on a project.
 
+After pushing, let's create a Pull Request on GitHub.com and utilize Copilot's code review functionality.
+
+1. Access your repository on GitHub
+2. Click **Open a pull request**
+3. On the Pull Request creation screen, click **Copilot icon** >> **Summary**
+
 ![PR Reviewer](github-copilot-workshop-id/img/__reviewer.png)
 
+In the **Reviewers** section, you can assign **Copilot** as a reviewer to request code review from Copilot.
+
 Copilot would check all the files in the PR and make appropriate comments.
-Like in actual PR reviews, you can choose to follow or ignore the comments.
+
+> aside positive
+>
+> **Auto-assign Setting**: By checking Settings >> Branches >> Rulesets >> Require a pull request before merging >> Automatically request Copilot code review, Copilot will be automatically assigned when opening Pull Requests.
+
+After the Pull Request is opened, you can view Copilot Code Review results:
+
+- **Pull Request Overview**: Summary of code changes
+- **Issues Identified**: Pointing out potential problems
+- **Improvement Suggestions**: Specific suggestions for improving code quality
 
 > aside negative
 >
@@ -561,22 +578,105 @@ Like in actual PR reviews, you can choose to follow or ignore the comments.
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 15 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## [WIP] Automatic Issue Creation and Coding Agent
+## Automatic Issue Creation and Coding Agent
 Duration: 15
 
+Let's use the website version of GitHub Copilot to automatically generate project improvement suggestions as Issues and utilize Coding Agent.
+
+### Automatic Issue Creation with GitHub Copilot
+
+1. Access **GitHub.com** and click the **Copilot** icon in the top right
+2. Confirm your repository is added to the Chat context
+3. Enter the following prompt:
+
+```
+Please create 3 issues to customize the Pomodoro timer.
+
+Pattern A: Enhanced Visual Feedback
+
+Circular progress bar animation: Smooth decreasing animation based on remaining time
+Color changes: Gradient change from blue→yellow→red as time passes
+Background effects: Particle effects or ripple animations during focus time
+Test purpose: Measure the impact of visual immersion on user concentration
+
+Pattern B: Improved Customizability
+
+Flexible time settings: Selectable from 15/25/35/45 minutes instead of fixed 25 minutes
+Theme switching: Dark/Light/Focus mode (minimal)
+Sound settings: On/off toggle for start/end/tick sounds
+Custom break time: Selectable from 5/10/15 minutes
+Test purpose: Measure the impact of personalized settings on user retention rate
+
+Pattern C: Adding Gamification Elements
+
+Experience point system: XP and level up based on completed Pomodoros
+Achievement badges: Achievement system like "3 consecutive days", "10 completions this week"
+Weekly/monthly statistics: More detailed graph display (completion rate, average focus time, etc.)
+Streak display: Consecutive day count display
+Test purpose: Measure the impact of gamification elements on motivation maintenance and continued use
+```
+
+![Issue Creation with GitHub Copilot](github-copilot-workshop-id/img/__create-issues.png)
+
+### Issue Creation and Coding Agent Assignment
+
+1. **Copilot automatically generates 3 Issues**
+2. Review the content of each Issue and edit as necessary
+3. Click the **Create** button on each Issue to create them
+4. After transitioning to the Issue screen, select **Copilot** in the **Assignees** section to assign the Coding Agent
+
+![Assign Coding Agent to Issue](github-copilot-workshop-id/img/__assign-issues.png)
+
+### Expected Pull Request Results
+
+When Coding Agent is assigned, the following results can be expected:
+
+- **Automatic Code Implementation**: Function implementation based on each Issue's requirements
+- **Pull Request Creation**: Automatic PR creation after implementation completion
+- **Comprehensive Testing**: Including both unit tests and UI tests
+
+> aside positive
+>
+> **Utilizing MCP Server**: GitHub MCP Server and Playwright MCP Server are included as initial settings in Coding Agent. This allows not only unit testing but also automatic UI checking through screenshots. Coding Agent visually verifies that implemented functions work as expected and provides higher quality code.
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 16 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## [WIP] Implement PR From Coding Agent
-Duration: 5
+## Implement PR From Coding Agent
+Duration: 10
 
+After assigning the issues to an agent, Copilot will automatically create a branch, a pull request, complete with a detailed description of changes it makes to address the issue.
+
+You can check the progress of Copilot in addressing the issues in **Pull requests** page.
+
+![Issue Progress](github-copilot-workshop-id/img/__issue-prog.png)
+
+After a few minutes, depending on the task size, we can see the changes completed as a Pull Request.
+
+![Issue Done](github-copilot-workshop-id/img/__issue-done-1.png)
+
+
+![Issue Done](github-copilot-workshop-id/img/__issue-done-2.png)
+
+Add your review and then merge the PR.
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 17 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## [WIP] Update The Documents
+## Update The Documents (Optional)
 Duration: 5
+
+With the new enhancement merged into our working branch, let's update the application documentation to reflect the latest changes.
+
+Let's say we implemented the "Enhanced Visual Feedback" issue from our previous steps, we can ask Copilot to do this:
+
+```text
+Update the application documentation to reflect the recent changes regarding Enhanced Visual Feedback.
+```
+
+Copilot will update your documentation based on the application's latest status.
+
+![Updated Documentation](github-copilot-workshop-id/img/__updoc.png)
 
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
