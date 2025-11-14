@@ -184,6 +184,16 @@ Verify the setting is correctly applied:
 
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = =  SLIDE XX = = = = = = = = = = = = = -->
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+## Github Coopilot Spaces
+Duration: 10
+```text
+This space will be used for designing and improving a Pomodoro web application that we are going to build.
+```
+
+
+<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 04 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 ## Creating the Pomodoro app
@@ -233,7 +243,9 @@ Once the image is uploaded, it will be displayed in Copilot Chat.
 Then, enter the following prompt:
 
 ```text
-We plan to create a simple Pomodoro timer web app in this project to learn the aspects of Github Copilot. The attached image is a UI mock for that app. What design should we proceed with to create this app using Flask and HTML/CSS/JavaScript? Please suggest an architecture.
+We plan to create a simple Pomodoro timer web app in this project to learn the aspects of Github Copilot. The attached image is a UI mock for that app. What design should we proceed with to create this app using Flask and HTML/CSS/JavaScript?
+I want the timer functionality to be handled on the frontend using JavaScript. The backend should serves the HTML page and static assets, and to store the status of ongoing or finished sessions.
+Please suggest an architecture.
 ```
 
 It will then suggest a recommended web application architecture.
@@ -430,8 +442,14 @@ Here are some examples of great prompts that you can use, modify, and adjust: [G
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 11 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## Unit Tests
-Duration: 10
+## Unit Tests and Code Quality
+Duration: 15
+
+### Step 1. Enable CodeQL and Code Quality
+
+TBA
+
+### Step 2. Create Unit Tests
 
 We can ask Copilot to create unit tests. For example, we can enter this prompt to do that:
 
