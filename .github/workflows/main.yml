@@ -1,0 +1,35 @@
+name: Create index.html
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/main.yml'
+
+  # Allow manual trigger 
+  workflow_dispatch:      
+
+jobs:
+  convert-to-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: claat-cli
+        uses: xSAVIKx/claat-gh-action@v0
+        with:
+            # export format
+            format: "html" 
+            # The destination environment of the export
+            environment: "web"
+            # The source content to be converted into a static website
+            source: /workshop.md
+            # The output directory or `-` for stdout.
+            output: . # default is .
+          
