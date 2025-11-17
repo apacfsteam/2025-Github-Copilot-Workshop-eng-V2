@@ -29,10 +29,11 @@ jobs:
       - name: Export codelab to HTML
         run: ./claat export -o github-universe/ -e web -f html workshop.md
       
-      - name: Commit and push changes
+      - name: Upload to Azure Storage
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add github-universe/
-          git commit -m "Update codelab HTML" || echo "No changes to commit"
-          git push
+          az storage blob upload-batch \
+            --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} \
+            --sas-token "${{ secrets.AZURE_STORAGE_SAS_TOKEN }}" \
+            --destination '$web' \
+            --source ./github-universe/ \
+            --overwrite
