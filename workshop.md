@@ -482,6 +482,14 @@ Focus on the following instructions:
 >
 > You can create as many specific agents as you want.
 
+You will be able to access your custom agent in Copilot Chat.
+
+![Copilot VSCode](github-copilot-workshop-id/img/__agent-vsc.png)
+
+And once you've committed the agent definition to `main` branch, you can also access the agent in Copilot Online.
+
+![Copilot Online](github-copilot-workshop-id/img/__agent-cpo.png)
+
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 12 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
@@ -490,11 +498,23 @@ Duration: 15
 
 ### Step 1. Enable CodeQL and Code Quality
 
-[TBA]
+Merge all of our changes to the `main` branch.
+
+Then in your repo, go to `Settings` → `Code quality`. Click on `Enable code quality` button.
+
+If you've already merged your codes to `main` branch, it will automatically execute a scan.
+
+![Code Quality](github-copilot-workshop-id/img/__cq.png)
+
+You can check the result of the action executed by Code quality in the `Actions` tab.
+
+![Actions](github-copilot-workshop-id/img/__cq-actions.png)
 
 ### Step 2. Create Unit Tests
 
-We can ask Copilot to create unit tests. For example, we can enter this prompt to do that:
+First, let's create a new branch called `feature/unit-tests`.
+
+We can ask Copilot to create unit tests for our application. Enter this prompt to start creating unit tests:
 
 ```text
 We want to add unit testing to this project.
@@ -518,7 +538,7 @@ We can always do it manually by referring to the added section in the readme fil
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 14 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## Github Copilot Online
+## Automatic PR Summary and Review
 Duration: 10
 
 Copilot is also available on Github's website. Click on [this link](https://github.com/copilot/) to open Copilot on Github.
@@ -527,7 +547,7 @@ Copilot is also available on Github's website. Click on [this link](https://gith
 
 Let's see some of the things Copilot can do for us in the Github website.
 
-### 1. Add PR Description
+### 1. Add PR Summary
 
 We can ask Copilot to add Pull Request description.
 
@@ -563,6 +583,10 @@ After the Pull Request is opened, you can view Copilot Code Review results:
 - **Pull Request Overview**: Summary of code changes
 - **Issues Identified**: Pointing out potential problems
 - **Improvement Suggestions**: Specific suggestions for improving code quality
+
+![Copilot Review 1](github-copilot-workshop-id/img/__cp-review-1.png)
+
+![Copilot Review 2](github-copilot-workshop-id/img/__cp-review-2.png)
 
 > aside negative
 >
@@ -610,13 +634,19 @@ Streak display: Consecutive day count display
 Test purpose: Measure the impact of gamification elements on motivation maintenance and continued use
 ```
 
-![Issue Creation with GitHub Copilot](github-copilot-workshop-id/img/__create-issues.png)
+![The Issues](github-copilot-workshop-id/img/__create-issues.png)
 
 ### Issue Creation and Coding Agent Assignment
 
 1. **Copilot automatically generates 3 Issues**
+
+![Assign Coding Agent to Issue](github-copilot-workshop-id/img/__created-issues.png)
+
 2. Review the content of each Issue and edit as necessary
 3. Click the **Create** button on each Issue to create them
+
+![The Issues](github-copilot-workshop-id/img/__the-issues.png)
+
 4. After transitioning to the Issue screen, select **Copilot** in the **Assignees** section to assign the Coding Agent
 
 ![Assign Coding Agent to Issue](github-copilot-workshop-id/img/__assign-issues.png)
@@ -632,6 +662,7 @@ When Coding Agent is assigned, the following results can be expected:
 > aside positive
 >
 > **Utilizing MCP Server**: GitHub MCP Server and Playwright MCP Server are included as initial settings in Coding Agent. This allows not only unit testing but also automatic UI checking through screenshots. Coding Agent visually verifies that implemented functions work as expected and provides higher quality code.
+
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 16 = = = = = = = = = = = = = -->
@@ -649,28 +680,44 @@ After a few minutes, depending on the task size, we can see the changes complete
 
 ![Issue Done](github-copilot-workshop-id/img/__issue-done-1.png)
 
-
 ![Issue Done](github-copilot-workshop-id/img/__issue-done-2.png)
 
 Add your review and then merge the PR.
 
+> aside positive
+>
+> From the Agents page on Copilot online, you can delegate a coding agent to work on a new task while other coding agents are working on the previous issues.
+
+![New Issue](github-copilot-workshop-id/img/__issue-new.png)
+
+
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 17 = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-## Update The Documents (Optional)
+## Deploy to Azure (Optional)
 Duration: 5
 
-With the new enhancement merged into our working branch, let's update the application documentation to reflect the latest changes.
+Let's deploy our work online. Before we start, login to Azure via the command line.
 
-Let's say we implemented the "Enhanced Visual Feedback" issue from our previous steps, we can ask Copilot to do this:
-
-```text
-Update the application documentation to reflect the recent changes regarding Enhanced Visual Feedback.
+```bash
+az login
 ```
 
-Copilot will update your documentation based on the application's latest status.
+Then, enter this prompt to start the deployment process.
 
-![Updated Documentation](github-copilot-workshop-id/img/__updoc.png)
+```text
+Deploy this app to Azure App Service using Free Tier to be deployed in Region of Indonesia Central. Please use the following Subscription 'Visual Studio Enterprise Subscription' and create a new Resource Group called 'POMODORO_DEPLOY'. Use Azure CLI to execute.
+```
+
+![Azure Deployment Start](github-copilot-workshop-id/img/__az-start.png)
+
+> aside positive
+>
+> You might need to approve Copilot's requests during the process.
+
+Copilot can open a simple browser to test whether the deployment is successful.
+
+![Azure Deployment Done](github-copilot-workshop-id/img/__az-done.png)
 
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->

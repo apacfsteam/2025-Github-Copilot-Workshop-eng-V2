@@ -383,15 +383,25 @@ Focus on the following instructions:
 </code></pre>
 <aside class="special"><p>You can create as many specific agents as you want.</p>
 </aside>
+<p>You will be able to access your custom agent in Copilot Chat.</p>
+<p class="image-container"><img alt="Copilot VSCode" src="img/fe65896ab474425c.png"></p>
+<p>And once you&#39;ve committed the agent definition to <code>main</code> branch, you can also access the agent in Copilot Online.</p>
+<p class="image-container"><img alt="Copilot Online" src="img/abd8e6bc75c1dabc.png"></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Unit Tests and Code Quality" duration="15">
         <h2 is-upgraded>Step 1. Enable CodeQL and Code Quality</h2>
-<p>[TBA]</p>
+<p>Merge all of our changes to the <code>main</code> branch.</p>
+<p>Then in your repo, go to <code>Settings</code> → <code>Code quality</code>. Click on <code>Enable code quality</code> button.</p>
+<p>If you&#39;ve already merged your codes to <code>main</code> branch, it will automatically execute a scan.</p>
+<p class="image-container"><img alt="Code Quality" src="img/24e16f186a27365c.png"></p>
+<p>You can check the result of the action executed by Code quality in the <code>Actions</code> tab.</p>
+<p class="image-container"><img alt="Actions" src="img/692d228c777a4b62.png"></p>
 <h2 is-upgraded>Step 2. Create Unit Tests</h2>
-<p>We can ask Copilot to create unit tests. For example, we can enter this prompt to do that:</p>
+<p>First, let&#39;s create a new branch called <code>feature/unit-tests</code>.</p>
+<p>We can ask Copilot to create unit tests for our application. Enter this prompt to start creating unit tests:</p>
 <pre><code language="language-text" class="language-text">We want to add unit testing to this project.
 Please create unit tests for all the important functions in this application.
 Install necessary libraries to support this change.
@@ -405,11 +415,11 @@ Then in the readme file, add explanation on how to run the unit tests.
 
       </google-codelab-step>
     
-      <google-codelab-step label="Github Copilot Online" duration="10">
+      <google-codelab-step label="Automatic PR Summary and Review" duration="10">
         <p>Copilot is also available on Github&#39;s website. Click on <a href="https://github.com/copilot/" target="_blank">this link</a> to open Copilot on Github.</p>
 <p class="image-container"><img alt="Copilot Online" src="img/a7c200d9745d6129.png"></p>
 <p>Let&#39;s see some of the things Copilot can do for us in the Github website.</p>
-<h2 is-upgraded>1. Add PR Description</h2>
+<h2 is-upgraded>1. Add PR Summary</h2>
 <p>We can ask Copilot to add Pull Request description.</p>
 <p class="image-container"><img alt="Request PR summary" src="img/18ffabfac342e07b.png"></p>
 <p>It will create a comprehensive PR description based on the commits in the branch that we wanted to merge.</p>
@@ -433,6 +443,8 @@ Then in the readme file, add explanation on how to run the unit tests.
 <li><strong>Issues Identified</strong>: Pointing out potential problems</li>
 <li><strong>Improvement Suggestions</strong>: Specific suggestions for improving code quality</li>
 </ul>
+<p class="image-container"><img alt="Copilot Review 1" src="img/8eef40501778fd82.png"></p>
+<p class="image-container"><img alt="Copilot Review 2" src="img/82289ac012819e2d.png"></p>
 <aside class="warning"><p><strong>Note</strong>: Depending on the PR size, you might need to wait for Copilot to finish creating a summary or adding PR reviews.</p>
 </aside>
 
@@ -472,12 +484,18 @@ Weekly/monthly statistics: More detailed graph display (completion rate, average
 Streak display: Consecutive day count display
 Test purpose: Measure the impact of gamification elements on motivation maintenance and continued use
 </code></pre>
-<p class="image-container"><img alt="Issue Creation with GitHub Copilot" src="img/a6b65e33dc2c47bf.png"></p>
+<p class="image-container"><img alt="The Issues" src="img/a6b65e33dc2c47bf.png"></p>
 <h2 is-upgraded>Issue Creation and Coding Agent Assignment</h2>
 <ol type="1">
 <li><strong>Copilot automatically generates 3 Issues</strong></li>
+</ol>
+<p class="image-container"><img alt="Assign Coding Agent to Issue" src="img/3f27b7ee4fe02667.png"></p>
+<ol type="1" start="2">
 <li>Review the content of each Issue and edit as necessary</li>
 <li>Click the <strong>Create</strong> button on each Issue to create them</li>
+</ol>
+<p class="image-container"><img alt="The Issues" src="img/f12b97b30ad2c4b3.png"></p>
+<ol type="1" start="4">
 <li>After transitioning to the Issue screen, select <strong>Copilot</strong> in the <strong>Assignees</strong> section to assign the Coding Agent</li>
 </ol>
 <p class="image-container"><img alt="Assign Coding Agent to Issue" src="img/613355f2901aedd2.png"></p>
@@ -502,17 +520,25 @@ Test purpose: Measure the impact of gamification elements on motivation maintena
 <p class="image-container"><img alt="Issue Done" src="img/4d97349168e49f63.png"></p>
 <p class="image-container"><img alt="Issue Done" src="img/46f51c8d3831e58c.png"></p>
 <p>Add your review and then merge the PR.</p>
+<aside class="special"><p>From the Agents page on Copilot online, you can delegate a coding agent to work on a new task while other coding agents are working on the previous issues.</p>
+</aside>
+<p class="image-container"><img alt="New Issue" src="img/85c8c06fa1c01916.png"></p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Update The Documents (Optional)" duration="5">
-        <p>With the new enhancement merged into our working branch, let&#39;s update the application documentation to reflect the latest changes.</p>
-<p>Let&#39;s say we implemented the &#34;Enhanced Visual Feedback&#34; issue from our previous steps, we can ask Copilot to do this:</p>
-<pre><code language="language-text" class="language-text">Update the application documentation to reflect the recent changes regarding Enhanced Visual Feedback.
+      <google-codelab-step label="Deploy to Azure (Optional)" duration="5">
+        <p>Let&#39;s deploy our work online. Before we start, login to Azure via the command line.</p>
+<pre><code language="language-bash" class="language-bash">az login
 </code></pre>
-<p>Copilot will update your documentation based on the application&#39;s latest status.</p>
-<p class="image-container"><img alt="Updated Documentation" src="img/a9f0cc9a36e3b275.png"></p>
+<p>Then, enter this prompt to start the deployment process.</p>
+<pre><code language="language-text" class="language-text">Deploy this app to Azure App Service using Free Tier to be deployed in Region of Indonesia Central. Please use the following Subscription &#39;Visual Studio Enterprise Subscription&#39; and create a new Resource Group called &#39;POMODORO_DEPLOY&#39;. Use Azure CLI to execute.
+</code></pre>
+<p class="image-container"><img alt="Azure Deployment Start" src="img/14247d4f87e8d83d.png"></p>
+<aside class="special"><p>You might need to approve Copilot&#39;s requests during the process.</p>
+</aside>
+<p>Copilot can open a simple browser to test whether the deployment is successful.</p>
+<p class="image-container"><img alt="Azure Deployment Done" src="img/feacbd7fb305cfd2.png"></p>
 
 
       </google-codelab-step>

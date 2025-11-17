@@ -1,1 +1,1 @@
-https://apacfsteam.github.io/2025-Github-Copilot-Workshop-long-eng/github-copilot-workshop/index.html#0
+Check the build site here: [https://stghuniverse.z45.web.core.windows.net/#0](https://stghuniverse.z45.web.core.windows.net/#0)
