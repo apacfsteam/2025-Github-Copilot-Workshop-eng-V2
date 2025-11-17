@@ -28,4 +28,11 @@ jobs:
 
       - name: Export codelab to HTML
         run: ./claat export -o github-universe/ -e web -f html workshop.md
-          
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-universe/
+          git commit -m "Update codelab HTML" || echo "No changes to commit"
+          git push
