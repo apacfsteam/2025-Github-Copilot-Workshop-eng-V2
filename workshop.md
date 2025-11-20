@@ -26,9 +26,17 @@ GitHub Copilot Chat enables interactive dialogue with AI through a chat experien
 
 ### Prerequisites
 
-- Visual Studio Code is installed
-- GitHub Copilot license is available
+- Visual Studio Code (latest version)
+This workshop material was created on version: 1.106.0 (Universal)
+- GitHub Copilot license
+License should support Code Quality feature
+- Github Copilot VS Code extension
+- Github MCP server ([link](https://github.com/mcp/github/github-mcp-server))
 - GitHub account is available
+- Azure subscription
+- Azure CLI ([link](https://learn.microsoft.com/en-us/cli/azure/?view=azure-cli-latest))
+- Python (preferably Python 3)
+- `uv` package manager ([link](https://github.com/astral-sh/uv))
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 <!-- = = = = = = = = = = = = =  SLIDE 02 = = = = = = = = = = = = = -->
